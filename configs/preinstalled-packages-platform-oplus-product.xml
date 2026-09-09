@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- System packages to preinstall on all devices with aosp_product, per user type.
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <!-- Microsoft Link to Windows -->
+    <install-in-user-type package="com.microsoft.appmanager">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+        <do-not-install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+
+    <!-- Microsoft Device Integration Service -->
+    <install-in-user-type package="com.microsoft.deviceintegrationservice">
+        <install-in user-type="FULL" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+        <do-not-install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+
+    <!-- Microsoft Cross Device Service Broker -->
+    <install-in-user-type package="com.microsoftsdk.crossdeviceservicebroker">
+        <install-in user-type="FULL" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+        <do-not-install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+</config>

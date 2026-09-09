@@ -1,0 +1,6 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from OnePlus 12.
+
+product/priv-app/LinktoWindows/LinktoWindows.apk;PRESIGNED
+product/priv-app/DeviceIntegrationService/DeviceIntegrationService.apk;PRESIGNED
+product/priv-app/CrossDeviceServiceBroker/CrossDeviceServiceBroker.apk;PLATFORM
