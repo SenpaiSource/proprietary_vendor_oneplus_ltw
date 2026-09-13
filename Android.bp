@@ -22,8 +22,7 @@ android_app_import {
     name: "DeviceIntegrationService",
     owner: "oneplus",
     apk: "proprietary/product/priv-app/DeviceIntegrationService/DeviceIntegrationService.apk",
-    preprocessed: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
