@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <!-- Microsoft Link to Windows: Component Overrides for Settings Tile & Launcher -->
+    <component-override package="com.microsoft.appmanager">
+        <component class="com.microsoft.appmanager.StartUpSettingActivity" enabled="true" />
+        <component class="com.microsoft.appmanager.StartUpCoreActivity" enabled="true" />
+        <component class="com.microsoft.appmanager.OEMStartUpActivity" enabled="true" />
+    </component-override>
+</config>
