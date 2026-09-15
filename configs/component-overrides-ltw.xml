@@ -4,10 +4,19 @@
     SPDX-License-Identifier: Apache-2.0
 -->
 <config>
-    <!-- Microsoft Link to Windows: Component Overrides for Settings Tile & Launcher -->
+    <!-- Microsoft Link to Windows: Component Overrides for Settings Tile, Launcher Icon & Service -->
     <component-override package="com.microsoft.appmanager">
+        <!-- Main setup / launcher entry points -->
         <component class="com.microsoft.appmanager.StartUpSettingActivity" enabled="true" />
         <component class="com.microsoft.appmanager.StartUpCoreActivity" enabled="true" />
         <component class="com.microsoft.appmanager.OEMStartUpActivity" enabled="true" />
+        <!-- Settings tile (Quick Settings panel integration) -->
+        <component class="com.microsoft.appmanager.quicksettings.LinkToWindowsTileService" enabled="true" />
+        <!-- Launcher icon (home screen app icon) -->
+        <component class="com.microsoft.appmanager.LauncherActivity" enabled="true" />
+        <!-- Companion device pairing -->
+        <component class="com.microsoft.appmanager.companion.CompanionDeviceActivity" enabled="true" />
+        <!-- Background notification listener -->
+        <component class="com.microsoft.appmanager.notifications.NotificationListenerService" enabled="true" />
     </component-override>
 </config>

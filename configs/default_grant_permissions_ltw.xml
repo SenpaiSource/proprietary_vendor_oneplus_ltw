@@ -3,4 +3,16 @@
     <default-grant-permissions package="com.microsoft.deviceintegrationservice">
         <permission name="android.permission.POST_NOTIFICATIONS"/>
     </default-grant-permissions>
+
+    <default-grant-permissions package="com.microsoft.appmanager">
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT"/>
+        <permission name="android.permission.BLUETOOTH_SCAN"/>
+        <permission name="android.permission.RECORD_AUDIO"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.READ_CONTACTS"/>
+        <permission name="android.permission.READ_CALL_LOG"/>
+        <permission name="android.permission.SEND_SMS"/>
+        <permission name="android.permission.READ_SMS"/>
+    </default-grant-permissions>
 </packages>
