@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# Link to Windows — boot-time appops and permission grants
+# Runs after boot_completed to ensure PackageManager is ready
+
+on property:sys.boot_completed=1
+    # Grant appops for Link to Windows (com.microsoft.appmanager)
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager SYSTEM_ALERT_WINDOW allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager RECORD_AUDIO allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager BLUETOOTH_CONNECT allow
+
+    # Grant runtime permissions needed for LtW features
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.BLUETOOTH_CONNECT
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.BLUETOOTH_SCAN
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.RECORD_AUDIO
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_PHONE_STATE
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_CONTACTS
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_CALL_LOG
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.SEND_SMS
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_SMS
