@@ -17,7 +17,7 @@
         <permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
     </privapp-permissions>
 
-    <!-- Microsoft Device Integration Service -->
+    <!-- Microsoft Device Integration Service (package: com.microsoft.deviceintegrationservice) -->
     <privapp-permissions package="com.microsoft.deviceintegrationservice">
         <permission name="deviceintegration.permission.MANAGE_CROSS_DEVICE"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
@@ -29,6 +29,9 @@
         <permission name="android.permission.INJECT_EVENTS"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.READ_CLIPBOARD_IN_BACKGROUND"/>
+        <!-- Required for appremote (initRemoteTaskService) and AISkill provider -->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_ACTIVITY_TASKS"/>
     </privapp-permissions>
 
     <!-- Microsoft Cross Device Service Broker -->

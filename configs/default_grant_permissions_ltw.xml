@@ -2,6 +2,7 @@
 <packages>
     <default-grant-permissions package="com.microsoft.deviceintegrationservice">
         <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT"/>
     </default-grant-permissions>
 
     <default-grant-permissions package="com.microsoft.appmanager">
