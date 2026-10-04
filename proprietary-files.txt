@@ -5,3 +5,4 @@ product/priv-app/LinktoWindows/LinktoWindows.apk;PRESIGNED
 product/priv-app/DeviceIntegrationService/DeviceIntegrationService.apk;PLATFORM
 product/priv-app/CrossDeviceServiceBroker/CrossDeviceServiceBroker.apk;PLATFORM
 product/framework/com.microsoft.device-private.jar
+system/bin/virtual_keyboard

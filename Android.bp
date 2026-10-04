@@ -41,3 +41,15 @@ android_app_import {
     privileged: true,
     product_specific: true,
 }
+
+cc_prebuilt_binary {
+    name: "virtual_keyboard",
+    owner: "oneplus",
+    srcs: ["proprietary/system/bin/virtual_keyboard"],
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    system_ext_specific: false,
+    relative_install_path: "",
+}
