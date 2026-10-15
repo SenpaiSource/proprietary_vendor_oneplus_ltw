@@ -5,8 +5,8 @@
 <config>
     <!-- Microsoft Link to Windows: Component Overrides for Launcher Icon & Services -->
     <component-override package="com.microsoft.appmanager">
-        <!-- Launcher entry point (app drawer icon) -->
-        <component class="com.microsoft.appmanager.StartUpCoreActivity" enabled="true" />
+        <!-- Launcher entry point (keep hidden from app drawer) -->
+        <component class="com.microsoft.appmanager.StartUpCoreActivity" enabled="false" />
         <!-- Settings integration -->
         <component class="com.microsoft.appmanager.StartUpSettingActivity" enabled="true" />
         <!-- Quick Settings panel integration -->
