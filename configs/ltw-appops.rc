@@ -8,16 +8,31 @@ on property:sys.boot_completed=1
     exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager SYSTEM_ALERT_WINDOW allow
     exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager RECORD_AUDIO allow
     exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager BLUETOOTH_CONNECT allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager MANAGE_EXTERNAL_STORAGE allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager LEGACY_STORAGE allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager READ_CLIPBOARD allow
 
     # Grant runtime permissions needed for LtW features
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.POST_NOTIFICATIONS
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.BLUETOOTH_CONNECT
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.BLUETOOTH_SCAN
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.BLUETOOTH_ADVERTISE
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.RECORD_AUDIO
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_PHONE_STATE
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.CALL_PHONE
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_CONTACTS
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_CALL_LOG
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.SEND_SMS
     exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_SMS
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.CAMERA
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.ACCESS_FINE_LOCATION
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_MEDIA_IMAGES
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_MEDIA_VIDEO
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.READ_EXTERNAL_STORAGE
+    exec_background - root root -- /system/bin/pm grant com.microsoft.appmanager android.permission.WRITE_EXTERNAL_STORAGE
+
+    # Allow notification listener for phone notifications sync to PC
+    exec_background - root root -- /system/bin/cmd notification allow_listener com.microsoft.appmanager/com.microsoft.mmx.agents.PhoneNotificationsListenerService
 
     # Grant runtime permissions for Device Integration Service (com.microsoft.deviceintegrationservice)
     exec_background - root root -- /system/bin/pm grant com.microsoft.deviceintegrationservice android.permission.POST_NOTIFICATIONS
@@ -27,4 +42,3 @@ on property:sys.boot_completed=1
     exec_background - root root -- /system/bin/cmd appops set com.microsoftsdk.crossdeviceservicebroker SYSTEM_ALERT_WINDOW allow
     exec_background - root root -- /system/bin/cmd appops set com.microsoftsdk.crossdeviceservicebroker READ_CLIPBOARD allow
     exec_background - root root -- /system/bin/cmd appops set com.microsoft.deviceintegrationservice READ_CLIPBOARD allow
-    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager READ_CLIPBOARD allow
