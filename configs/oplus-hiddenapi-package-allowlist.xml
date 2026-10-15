@@ -5,4 +5,5 @@
        for appremote, AISkill, and audio streaming internals -->
   <hidden-api-whitelisted-app package="com.microsoft.deviceintegrationservice" />
   <hidden-api-whitelisted-app package="com.microsoftsdk.crossdeviceservicebroker" />
+  <hidden-api-whitelisted-app package="com.microsoft.appmanager" />
 </config>

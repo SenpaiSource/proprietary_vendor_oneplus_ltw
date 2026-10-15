@@ -24,4 +24,9 @@
         <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
         <do-not-install-in user-type="android.os.usertype.profile.PRIVATE" />
     </install-in-user-type>
+
+    <!-- Battery optimization whitelist for continuous background sync -->
+    <allow-in-power-save package="com.microsoft.appmanager" />
+    <allow-in-power-save package="com.microsoft.deviceintegrationservice" />
+    <allow-in-power-save package="com.microsoftsdk.crossdeviceservicebroker" />
 </config>

@@ -22,3 +22,9 @@ on property:sys.boot_completed=1
     # Grant runtime permissions for Device Integration Service (com.microsoft.deviceintegrationservice)
     exec_background - root root -- /system/bin/pm grant com.microsoft.deviceintegrationservice android.permission.POST_NOTIFICATIONS
     exec_background - root root -- /system/bin/pm grant com.microsoft.deviceintegrationservice android.permission.BLUETOOTH_CONNECT
+
+    # Grant appops for CrossDeviceServiceBroker (black screen overlay and clipboard access)
+    exec_background - root root -- /system/bin/cmd appops set com.microsoftsdk.crossdeviceservicebroker SYSTEM_ALERT_WINDOW allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoftsdk.crossdeviceservicebroker READ_CLIPBOARD allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.deviceintegrationservice READ_CLIPBOARD allow
+    exec_background - root root -- /system/bin/cmd appops set com.microsoft.appmanager READ_CLIPBOARD allow
