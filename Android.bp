@@ -9,8 +9,7 @@ android_app_import {
     name: "LinktoWindows",
     owner: "oneplus",
     apk: "proprietary/product/priv-app/LinktoWindows/LinktoWindows.apk",
-    preprocessed: true,
-    presigned: true,
+    certificate: "platform",
     dex_preopt: {
         enabled: false,
     },
