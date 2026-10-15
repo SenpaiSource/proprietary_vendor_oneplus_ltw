@@ -2,7 +2,6 @@
 <permissions>
     <!-- Microsoft Link to Windows -->
     <privapp-permissions package="com.microsoft.appmanager">
-        <permission name="android.permission.WHITELIST_AUTO_REVOKE_PERMISSIONS"/>
         <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
         <permission name="android.permission.REQUEST_COMPANION_PROFILE_COMPUTER"/>
         <permission name="android.permission.REQUEST_COMPANION_SELF_MANAGED"/>
@@ -10,12 +9,6 @@
         <permission name="android.permission.CAPTURE_MEDIA_OUTPUT"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
-        <!-- Additional grants for full LtW functionality -->
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.INJECT_EVENTS"/>
-        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
-        <permission name="android.permission.READ_CLIPBOARD_IN_BACKGROUND"/>
-        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 
     <!-- Microsoft Device Integration Service (package: com.microsoft.deviceintegrationservice) -->
